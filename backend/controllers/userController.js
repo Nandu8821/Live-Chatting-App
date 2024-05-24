@@ -31,7 +31,7 @@ export const register = async (req,res)=>{
         confirmPassword,
         gender,
     })
-    return res.status(201).json({msg:"User created successfully"})
+    return res.status(201).json({message:"Account created successfully" ,success:true})
    }catch (error){
 console.log(error)
    }
@@ -67,6 +67,7 @@ export const login = async (req, res) => {
             profilePhoto:user.profilePhoto,
             gender:user.gender,
             success:true,
+            message : "User Logged in successfully"
          })
          
     }catch(error){
@@ -78,7 +79,7 @@ export const login = async (req, res) => {
 export const logout =  (req,res)=>{
     try{
         return res.status(200).cookie("token","",{maxAge:0}).json({
-            message:"user logged out successfully."
+            message:"user logged out successfully.",success:true
         })
          
 

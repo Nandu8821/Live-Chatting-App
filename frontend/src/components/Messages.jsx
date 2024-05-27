@@ -8,20 +8,19 @@ const Messages = () => {
  useGetMessages();
 
  const {messages} = useSelector(store=>store.message)
-
+ 
  if(!messages) return;
 
 
   return (
     <div className='px-4 flex-1 overflow-auto'>
 
-    {
-      messages?.map((msg)=>{
-        return (
-         <Message key={msg._id} msg={msg.Message}  />
-        )
-      })
-    }
+   {
+messages?.map((data) =>{
+  return (
+    <Message  key={data._id} data={data}   />
+)})
+   }
   
 
       

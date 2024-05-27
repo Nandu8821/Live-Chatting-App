@@ -1,20 +1,23 @@
 import React from 'react'
 import SendInput from './SendInput'
 import Messages from './Messages'
+import { useSelector } from 'react-redux'
 
 const MessageContainer = () => {
+const {selectedUser} = useSelector(store=>store.user)
+
   return (
     <div className='md:min-w-[550px] flex flex-col'>
     <div className='flex gap-5 items-center bg-zinc-800 text-white px-4 py-2 mb-2 '>
         <div className='avatar online '>
             <div className='w-12 rounded-full'>
-                <img src='https://avatar.iran.liara.run/public/boy' alt='img' />
+                <img src={selectedUser?.profilePhoto} alt='img' />
             </div>
         </div>
 
         <div className=' flex flex-col flex-1'>
             <div className='flex justify-between items-center  gap-2  text-white'>
-                <p>Nandu meena </p>
+                <p>{selectedUser?.fullName}</p>
             </div>
         </div>
     </div>

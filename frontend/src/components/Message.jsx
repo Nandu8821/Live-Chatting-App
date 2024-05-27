@@ -1,7 +1,8 @@
 import React from 'react'
 
-const Message = ({msg}) => {
-
+const Message = ({data}) => {
+ 
+    
     return (
         <div className="chat chat-end">
             <div className="chat-image avatar">
@@ -13,7 +14,7 @@ const Message = ({msg}) => {
               
                 <time className="text-xs opacity-50 text-white">12:45</time>
             </div>
-            <div className="chat-bubble">{msg?.msg}</div>
+            <div className="chat-bubble">{data.message}</div>
            
         </div>
     )

@@ -12,7 +12,7 @@ const selectedUserHandler =(user)=>{
 
 return (
         <>
-            <div onClick={()=>selectedUserHandler(user)} className={` ${selectedUser?._id === user?._id ? " hover:bg-black" : ""} flex gap-5 items-center    hover:bg-black rounded p-2 cursor-pointer`}>
+            <div onClick={()=>selectedUserHandler(user)} className={` ${selectedUser?._id === user?._id ? " hover:bg-black" : ""} flex gap-5 items-center  text-white  hover:bg-black rounded p-2 cursor-pointer`}>
                 <div className='avatar online '>
                     <div className='w-12 rounded-full'>
                         <img src={user.profilePhoto} alt='img' />
